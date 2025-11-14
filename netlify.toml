@@ -1,0 +1,12 @@
+# SPA: sirve index.html para cualquier ruta
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Fuerza dominio canónico sin www (ajusta si quieres al revés)
+[[redirects]]
+  from = "https://www.larubiadelospollos.lat/*"
+  to = "https://larubiadelospollos.lat/:splat"
+  status = 301
+  force = true
