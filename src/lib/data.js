@@ -114,7 +114,7 @@ export const benefits = [
   { icon: "🔥", title: "Sabor garantizado", text: "Pollo horneado con sabor y calidad." },
   { icon: "🕒", title: "Rápido y puntual", text: "Entregamos caliente y a tiempo." },
   { icon: "👩‍🍳", title: "Hecho con amor", text: "Recetas de casa, calidad constante." },
-  { icon: "🚗", title: "Delivery", text: "Cobertura en La Fe y zonas cercanas." },
+  
 ];
 
 export const testimonials = [
