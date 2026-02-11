@@ -1,19 +1,113 @@
 // src/lib/data.js
+
 export const menuItems = [
-  { id: 1,  name: "Pollo Horneado Entero", description: "Pollo entero horneado al estilo Al Grilled, jugoso, dorado y con sazón dominicano.", price: "RD$550", image: "/menu/pollo-entero.jpg" },
-  { id: 2,  name: "Medio Pollo Horneado", description: "La porción perfecta para dos personas, horneado con especias frescas.", price: "RD$275", image: "/menu/medio-pollo.jpg" },
-  { id: 3,  name: "Muslo", description: "Muslos horneados, tiernos y llenos de sabor casero.", price: "RD$125", image: "/menu/muslo.jpg" },
-  { id: 4,  name: "Pollo con Yuca", description: "Pollo horneado acompañado de yuca al vapor con cebolla y aceite de oliva.", price: "RD$225", image: "/menu/pollo-yuca.jpg" },
-  { id: 5,  name: "Plato del Día", description: "Comida completa con guarniciones según el día: arroz, habichuelas, carne o pollo.", price: "RD$225", image: "/menu/plato-dia.jpg" },
-  { id: 6,  name: "Ensalada Rusa", description: "Ensalada tradicional con papa, zanahoria, huevo y mayonesa.", price: "RD$150", image: "/menu/ensalada-rusa.jpg" },
-  { id: 7,  name: "Pechuga", description: "Pechuga horneada con especias de la casa, jugosa y ligera.", price: "RD$125", image: "/menu/pechuga.jpg" },
-  { id: 8,  name: "Chicharrón", description: "Crujiente por fuera y jugoso por dentro. Ideal para acompañar con yuca o tostones.", price: "RD$ 650 la libra, 325 media libra", image: "/menu/chicharron.jpg" },
-  { id: 9,  name: "Jugo de Limón 12 onza", description: "Refrescante jugo de limón natural, ideal para acompañar tu pollo horneado.", price: "RD$50", image: "/menu/limon.jpg" },
-  { id: 10, name: "Limón con Avena 12 onza", description: "Mezcla natural de limón con avena, perfecta para hidratar y nutrir.", price: "RD$50", image: "/menu/limon-avena.jpg" },
-  { id: 11, name: "Jugo de Chinola 12 onza", description: "Jugo de chinola natural, dulce y ácido al punto justo.", price: "RD$50", image: "/menu/chinola.jpg" },
-  { id: 12, name: "Jugo de Tamarindo 12 onza", description: "Tamarindo fresco y refrescante.", price: "RD$50", image: "/menu/tamarindo.jpg" },
-  { id: 13, name: "Jugo de Mango 12 onza", description: "El clásico jugo de mango dominicano, espeso y delicioso.", price: "RD$50", image: "/menu/mango.jpg" },
-  { id: 14, name: "Jugo de fresa con limon 16 onza", description: "El clásico jugo de fresa con limon delicioso.", price: "RD$85", image: "/menu/fresa.jpg" },
+  // --- PLATOS FUERTES ---
+  {
+    id: 1,
+    name: "Pollo Horneado Entero",
+    description: "Pollo entero horneado al estilo Al Grilled. Jugoso, dorado y con sazón dominicano.",
+    price: "RD$600 Solo / RD$750 Acompañado",
+    image: "/menu/pollo-entero.jpg"
+  },
+  {
+    id: 2,
+    name: "Medio Pollo Horneado",
+    description: "La porción perfecta para compartir. Horneado con especias frescas.",
+    price: "RD$300 Solo / RD$400 Acompañado",
+    image: "/menu/medio-pollo.jpg"
+  },
+  {
+    id: 3,
+    name: "Muslo de Pollo (1/4)",
+    description: "Muslo horneado, tierno y lleno de sabor casero.",
+    price: "RD$125 Solo / RD$225 Acompañado",
+    image: "/menu/muslo.jpg"
+  },
+  {
+    id: 7,
+    name: "Pechuga de Pollo (1/4)",
+    description: "Pechuga horneada con especias de la casa, jugosa y ligera.",
+    price: "RD$125 Solo / RD$225 Acompañado",
+    image: "/menu/pechuga.jpg"
+  },
+
+  // --- COMBOS DEL DÍA ---
+  {
+    id: 5,
+    name: "Combo 1: 1/4 Pollo + Guarnición",
+    description: "Tu pieza favorita (Muslo o Pechuga) con nuestro rico moro de guandules y ensalada rusa.",
+    price: "RD$285",
+    image: "/menu/plato-dia.jpg"
+  },
+  {
+    id: 15,
+    name: "Combo 2: 1/2 Pollo + Guarnición",
+    description: "Medio pollo horneado servido con moro de guandules y ensalada rusa.",
+    price: "RD$500",
+    image: "/menu/medio-pollo.jpg" // Reusamos imagen o pon una nueva
+  },
+
+  // --- GUARNICIONES Y ENSALADAS ---
+  {
+    id: 6,
+    name: "Ensalada Rusa",
+    description: "Tradicional con papa, zanahoria, cebolla, guisantes, huevo hervido y mayonesa.",
+    price: "RD$200",
+    image: "/menu/ensalada-rusa.jpg"
+  },
+  {
+    id: 16,
+    name: "Moro de Gandules",
+    description: "Arroz moro con gandules al estilo clásico.",
+    price: "Peq: RD$150 / Med: RD$200 / Grd: RD$350",
+    image: "/menu/plato-dia.jpg" // Usa una imagen genérica si no tienes una específica
+  },
+  {
+    id: 17,
+    name: "Yuca o Guineos",
+    description: "Guarnición de víveres encebollados (Yuca o Guineos).",
+    price: "Desde RD$125 (Ver detalle en local)",
+    image: "/menu/pollo-yuca.jpg"
+  },
+
+  // --- BEBIDAS Y JUGOS ---
+  {
+    id: 18,
+    name: "Jugo de China Natural (24oz)",
+    description: "Jugo de naranja recién exprimido. Disponible con leche o natural.",
+    price: "Normal: RD$150 / Con Leche: RD$200",
+    image: "/menu/chinola.jpg" // Ojo: Necesitarás una foto de jugo naranja
+  },
+  {
+    id: 11,
+    name: "Jugos Naturales (12-16oz)",
+    description: "Sabores: Chinola, Chinola con Avena, Fresa con Limón, Remolacha con Avena.",
+    price: "RD$75",
+    image: "/menu/chinola.jpg"
+  },
+  {
+    id: 19,
+    name: "Coca Cola",
+    description: "Refresco de botella.",
+    price: "RD$40",
+    image: "/menu/coca-cola.jpg" 
+  },
+  {
+    id: 20,
+    name: "Kola Real / Agua",
+    description: "Refresco Kola Real o Botella de Agua.",
+    price: "Kola Real: RD$25 / Agua: RD$25",
+    image: "/menu/kola-real.jpg" // Placeholder
+  },
+  
+  // Mantenemos el Chicharrón por si acaso, aunque no estaba en el PDF nuevo
+  {
+    id: 8,
+    name: "Chicharrón",
+    description: "Crujiente por fuera y jugoso por dentro. Ideal para acompañar con yuca o tostones.",
+    price: "RD$ 650 la libra / RD$325 media libra",
+    image: "/menu/chicharron.jpg"
+  }
 ];
 
 export const benefits = [
